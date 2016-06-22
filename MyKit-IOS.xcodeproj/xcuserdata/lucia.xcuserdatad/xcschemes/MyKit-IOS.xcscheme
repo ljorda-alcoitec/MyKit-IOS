@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "85D977EE1D1AA7D500B3C5EA"
+               BuildableName = "MyKit-IOS.app"
+               BlueprintName = "MyKit-IOS"
+               ReferencedContainer = "container:MyKit-IOS.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "85D978021D1AA7D500B3C5EA"
+               BuildableName = "MyKit-IOSTests.xctest"
+               BlueprintName = "MyKit-IOSTests"
+               ReferencedContainer = "container:MyKit-IOS.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "85D9780D1D1AA7D500B3C5EA"
+               BuildableName = "MyKit-IOSUITests.xctest"
+               BlueprintName = "MyKit-IOSUITests"
+               ReferencedContainer = "container:MyKit-IOS.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "85D977EE1D1AA7D500B3C5EA"
+            BuildableName = "MyKit-IOS.app"
+            BlueprintName = "MyKit-IOS"
+            ReferencedContainer = "container:MyKit-IOS.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "85D977EE1D1AA7D500B3C5EA"
+            BuildableName = "MyKit-IOS.app"
+            BlueprintName = "MyKit-IOS"
+            ReferencedContainer = "container:MyKit-IOS.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "85D977EE1D1AA7D500B3C5EA"
+            BuildableName = "MyKit-IOS.app"
+            BlueprintName = "MyKit-IOS"
+            ReferencedContainer = "container:MyKit-IOS.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
