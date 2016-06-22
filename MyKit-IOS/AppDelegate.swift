@@ -7,16 +7,40 @@
 //
 
 import UIKit
+import DrawerController;
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var centerContainer: DrawerController?
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) ->  Bool {let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+        
+        let centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("VCNotificacion") as! VCNotificacion;
+        
+        let menuViewController = mainStoryboard.instantiateViewControllerWithIdentifier("VCSlideOutMenu") as! VCSlideOutMenu;
+        
+        menuViewController.controladorAperturaFormularioSegunOpcionMenu = centerViewController;
+        
+        
+        let menuSideNav = UINavigationController(rootViewController: menuViewController);
+        let centerNav = UINavigationController(rootViewController: centerViewController);
+        
+        centerContainer = DrawerController(centerViewController: centerNav, leftDrawerViewController: menuSideNav);
+        
+        self.centerContainer!.openDrawerGestureModeMask = OpenDrawerGestureMode.PanningCenterView;
+        self.centerContainer!.closeDrawerGestureModeMask = CloseDrawerGestureMode.PanningCenterView;
+        
+        window!.rootViewController = centerContainer;
+        window!.makeKeyAndVisible();
+        
         return true
+    }
+    
+    func cerrarMenuDesplegableIzquierdo(){
+        self.centerContainer!.toggleDrawerSide(DrawerSide.Left, animated: true, completion: nil);
     }
 
     func applicationWillResignActive(application: UIApplication) {
