@@ -40,13 +40,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vm5-HM-ImK">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaMedicamento" rowHeight="65" id="vm5-HM-ImK" customClass="TVCellMedicamento" customModule="MyKit_IOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vm5-HM-ImK" id="Vzb-Kn-Kbh">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I2U-1G-Whh">
+                                            <rect key="frame" x="20" y="12" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="a3h-pR-K9H"/>
+                                                <constraint firstAttribute="width" constant="40" id="a4V-vs-Wmt"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emC-HR-fS3">
+                                            <rect key="frame" x="84" y="22" width="195" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="Lpz-fB-TIY"/>
+                                                <constraint firstAttribute="width" constant="195" id="OsZ-bP-m5O"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="emC-HR-fS3" firstAttribute="centerY" secondItem="Vzb-Kn-Kbh" secondAttribute="centerY" id="Cl2-jZ-49O"/>
+                                        <constraint firstItem="emC-HR-fS3" firstAttribute="leading" secondItem="Vzb-Kn-Kbh" secondAttribute="leading" constant="84" id="Wqn-fY-Kj9"/>
+                                        <constraint firstItem="emC-HR-fS3" firstAttribute="leading" secondItem="I2U-1G-Whh" secondAttribute="trailing" constant="24" id="p4a-7e-Qc5"/>
+                                        <constraint firstItem="I2U-1G-Whh" firstAttribute="centerY" secondItem="Vzb-Kn-Kbh" secondAttribute="centerY" id="sKN-EB-F0e"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgFormato" destination="I2U-1G-Whh" id="Ojx-RU-2iN"/>
+                                    <outlet property="lblMedicamento" destination="emC-HR-fS3" id="ux8-oK-leT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -61,6 +90,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tablaMedicamentos" destination="dqM-tL-LbT" id="5qz-Jt-qNz"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mC4-Af-U4z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,7 +11,7 @@ import SQLite;
 
 class VersionDAO{
     
-    static func getVersion(conexion: Conexion)-> Int{
+    static func getVersion(conexion: Conexion)-> Int64{
         if !conexion.existTable("vesion"){
             return 0;
         }

@@ -19,5 +19,17 @@
                 INSERT INTO version VALUES (1);
             </sql>
         </instruccion>
+        <instruccion>
+            <documentacion>
+                Creamos la tabla medicamento
+            </documentacion>
+            <sql>
+                CREATE TABLE IF NOT EXISTS medicamento(
+                id  INTEGER PRIMARY KEY AUTOINCREMENT,
+                nombre TEXT,
+                tipo INT
+                );
+            </sql>
+        </instruccion>
     </script>
 </xml>

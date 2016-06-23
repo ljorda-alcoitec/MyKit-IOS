@@ -11,7 +11,7 @@ import SWXMLHash
 
 class LectorScriptsSqlDeVersionXML{
     
-    static func getScripts(version: Int) -> Array<String>{
+    static func getScripts(version: Int64) -> Array<String>{
         
         let nombreFichero = "version_"+(String)(version);
         

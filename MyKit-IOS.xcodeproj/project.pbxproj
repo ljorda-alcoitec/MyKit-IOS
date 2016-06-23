@@ -15,6 +15,12 @@
 		85CE0B551D1BF60500E133F7 /* ControladorVesiones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE0B541D1BF60500E133F7 /* ControladorVesiones.swift */; };
 		85CE0B591D1BF66E00E133F7 /* VersionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE0B581D1BF66E00E133F7 /* VersionDAO.swift */; };
 		85CE0B5B1D1BF6B300E133F7 /* Conexion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE0B5A1D1BF6B300E133F7 /* Conexion.swift */; };
+		85CE0B5F1D1C228B00E133F7 /* Medicamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE0B5E1D1C228B00E133F7 /* Medicamento.swift */; };
+		85CE0B621D1C25F300E133F7 /* MedicamentoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE0B611D1C25F300E133F7 /* MedicamentoBuilder.swift */; };
+		85CE0B651D1C279400E133F7 /* TVCellMedicamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE0B641D1C279400E133F7 /* TVCellMedicamento.swift */; };
+		85CE0B671D1C295E00E133F7 /* TipoMedicamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE0B661D1C295E00E133F7 /* TipoMedicamento.swift */; };
+		85CE0B6C1D1C307A00E133F7 /* version_2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 85CE0B6B1D1C307A00E133F7 /* version_2.xml */; };
+		85CE0B6E1D1C332500E133F7 /* MedicamentoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE0B6D1D1C332500E133F7 /* MedicamentoDAO.swift */; };
 		85D977F31D1AA7D500B3C5EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D977F21D1AA7D500B3C5EA /* AppDelegate.swift */; };
 		85D977F81D1AA7D500B3C5EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D977F61D1AA7D500B3C5EA /* Main.storyboard */; };
 		85D977FA1D1AA7D500B3C5EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D977F91D1AA7D500B3C5EA /* Assets.xcassets */; };
@@ -61,6 +67,12 @@
 		85CE0B541D1BF60500E133F7 /* ControladorVesiones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControladorVesiones.swift; sourceTree = "<group>"; };
 		85CE0B581D1BF66E00E133F7 /* VersionDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionDAO.swift; sourceTree = "<group>"; };
 		85CE0B5A1D1BF6B300E133F7 /* Conexion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conexion.swift; sourceTree = "<group>"; };
+		85CE0B5E1D1C228B00E133F7 /* Medicamento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medicamento.swift; sourceTree = "<group>"; };
+		85CE0B611D1C25F300E133F7 /* MedicamentoBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicamentoBuilder.swift; sourceTree = "<group>"; };
+		85CE0B641D1C279400E133F7 /* TVCellMedicamento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVCellMedicamento.swift; sourceTree = "<group>"; };
+		85CE0B661D1C295E00E133F7 /* TipoMedicamento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoMedicamento.swift; sourceTree = "<group>"; };
+		85CE0B6B1D1C307A00E133F7 /* version_2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = version_2.xml; sourceTree = "<group>"; };
+		85CE0B6D1D1C332500E133F7 /* MedicamentoDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicamentoDAO.swift; sourceTree = "<group>"; };
 		85D977EF1D1AA7D500B3C5EA /* MyKit-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyKit-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D977F21D1AA7D500B3C5EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85D977F71D1AA7D500B3C5EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				85CE0B4C1D1BF39300E133F7 /* version_1.xml */,
+				85CE0B6B1D1C307A00E133F7 /* version_2.xml */,
 			);
 			name = versionesBBDD;
 			sourceTree = "<group>";
@@ -164,8 +177,34 @@
 			isa = PBXGroup;
 			children = (
 				85CE0B581D1BF66E00E133F7 /* VersionDAO.swift */,
+				85CE0B6D1D1C332500E133F7 /* MedicamentoDAO.swift */,
 			);
 			name = dao;
+			sourceTree = "<group>";
+		};
+		85CE0B5C1D1C226F00E133F7 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				85CE0B5D1D1C227700E133F7 /* entity */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		85CE0B5D1D1C227700E133F7 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				85CE0B5E1D1C228B00E133F7 /* Medicamento.swift */,
+				85CE0B661D1C295E00E133F7 /* TipoMedicamento.swift */,
+			);
+			name = entity;
+			sourceTree = "<group>";
+		};
+		85CE0B601D1C25B100E133F7 /* builder */ = {
+			isa = PBXGroup;
+			children = (
+				85CE0B611D1C25F300E133F7 /* MedicamentoBuilder.swift */,
+			);
+			name = builder;
 			sourceTree = "<group>";
 		};
 		85D977E61D1AA7D500B3C5EA = {
@@ -194,6 +233,8 @@
 			isa = PBXGroup;
 			children = (
 				85CE0B561D1BF63A00E133F7 /* persistence */,
+				85CE0B5C1D1C226F00E133F7 /* model */,
+				85CE0B601D1C25B100E133F7 /* builder */,
 				85CE0B491D1BF33F00E133F7 /* versionesBBDD */,
 				85CE0B481D1BF33000E133F7 /* utils */,
 				85D9782C1D1AD9C100B3C5EA /* base */,
@@ -259,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				85D978361D1ADB9100B3C5EA /* TVControllerMedicamento.swift */,
+				85CE0B641D1C279400E133F7 /* TVCellMedicamento.swift */,
 			);
 			name = medicamento;
 			sourceTree = "<group>";
@@ -394,6 +436,7 @@
 				85D977FD1D1AA7D500B3C5EA /* LaunchScreen.storyboard in Resources */,
 				85D977FA1D1AA7D500B3C5EA /* Assets.xcassets in Resources */,
 				85CE0B4D1D1BF39300E133F7 /* version_1.xml in Resources */,
+				85CE0B6C1D1C307A00E133F7 /* version_2.xml in Resources */,
 				85D977F81D1AA7D500B3C5EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,6 +585,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85CE0B621D1C25F300E133F7 /* MedicamentoBuilder.swift in Sources */,
 				85CE0B591D1BF66E00E133F7 /* VersionDAO.swift in Sources */,
 				85D978261D1AD83C00B3C5EA /* OpcionMenu.swift in Sources */,
 				85CE0B531D1BF59000E133F7 /* LectorScriptsSqlDeVersionXML.swift in Sources */,
@@ -549,12 +593,16 @@
 				85CE0B551D1BF60500E133F7 /* ControladorVesiones.swift in Sources */,
 				85CE0B4F1D1BF49700E133F7 /* StringExtensions.swift in Sources */,
 				85D978341D1ADA3400B3C5EA /* NavigationDrawerViewControllerBase.swift in Sources */,
+				85CE0B5F1D1C228B00E133F7 /* Medicamento.swift in Sources */,
 				85D978221D1AD7A200B3C5EA /* VCSlideOutMenu.swift in Sources */,
 				85D978241D1AD81600B3C5EA /* ControladorAperturaFormularioSegunOpcionMenu.swift in Sources */,
 				85D978371D1ADB9100B3C5EA /* TVControllerMedicamento.swift in Sources */,
+				85CE0B6E1D1C332500E133F7 /* MedicamentoDAO.swift in Sources */,
 				85D978281D1AD87000B3C5EA /* TVCellSlideOutMenu.swift in Sources */,
 				85D9782B1D1AD8F700B3C5EA /* VCNotificacion.swift in Sources */,
+				85CE0B651D1C279400E133F7 /* TVCellMedicamento.swift in Sources */,
 				85CE0B5B1D1BF6B300E133F7 /* Conexion.swift in Sources */,
+				85CE0B671D1C295E00E133F7 /* TipoMedicamento.swift in Sources */,
 				85D977F31D1AA7D500B3C5EA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

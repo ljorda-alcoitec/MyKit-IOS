@@ -1,0 +1,13 @@
+<xml>
+    <version>2</version>
+    <script>
+        <instruccion>
+            <documentacion>
+                Insertamos la version
+            </documentacion>
+            <sql>
+                INSERT INTO version VALUES (2);
+            </sql>
+        </instruccion>
+    </script>
+</xml>

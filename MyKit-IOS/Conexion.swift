@@ -29,8 +29,12 @@ class Conexion{
         try! self.conexion.execute(queryString);
     }
     
-    func leeEntero(queryString:String, _ bindings: Binding?...) -> Int{
+    func leeEntero(queryString:String, _ bindings: Binding?...) -> Int64{
         let stmt = try! self.conexion.prepare(queryString);
-        return stmt.scalar(bindings) as! Int;
+        return stmt.scalar(bindings) as! Int64;
+    }
+    
+    func selecccionar(queryString: String, _ bindings: Binding?...) -> Statement{
+        return try! self.conexion.prepare(queryString, bindings);
     }
 }

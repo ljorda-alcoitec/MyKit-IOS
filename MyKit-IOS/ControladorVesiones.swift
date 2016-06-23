@@ -10,7 +10,7 @@ import Foundation
 
 class ControladorVesiones{
     
-    static let versionFinal:Int = 1;
+    static let versionFinal:Int64 = 1;
     
     static func comprobarVersion(){
         
@@ -22,7 +22,7 @@ class ControladorVesiones{
         ControladorVesiones.actualizaVersionBD(version);
     }
     
-    static func actualizaVersionBD(versionActual: Int ){
+    static func actualizaVersionBD(versionActual: Int64){
         if versionActual == ControladorVesiones.versionFinal{
             return;
         }
@@ -35,7 +35,7 @@ class ControladorVesiones{
         }
     }
     
-    static func ejecutarScriptCambioVersion(conexion: Conexion, version: Int){
+    static func ejecutarScriptCambioVersion(conexion: Conexion, version: Int64){
         let listadoScripts = LectorScriptsSqlDeVersionXML.getScripts(version);
         for script in listadoScripts{
             conexion.modificaEsquema(script);
