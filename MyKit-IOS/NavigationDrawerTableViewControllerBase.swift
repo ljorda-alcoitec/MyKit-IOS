@@ -14,7 +14,7 @@ class NavigationDrawerTableViewControllerBase: UITableViewController {
         
         let centerViewController = self.storyboard!.instantiateViewControllerWithIdentifier(identificador) as UIViewController;
         
-        let centerNavContoller = UINavigationController(rootViewController: centerViewController)
+        let centerNavContoller = UINavigationController(rootViewController: centerViewController);
         
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
         

@@ -10,7 +10,7 @@ import UIKit
 
 class VCSlideOutMenu: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
-    @IBOutlet weak var tablaSlideOutMenu: UITableView!
+    @IBOutlet weak var tablaSlideOutMenu: UITableView!;
     
     var controladorAperturaFormularioSegunOpcionMenu:ControladorAperturaFormularioSegunOpcionMenu? = nil;
     
@@ -26,7 +26,7 @@ class VCSlideOutMenu: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell: TVCellSlideOutMenu = tableView.dequeueReusableCellWithIdentifier("celdaOpcionMenu", forIndexPath: indexPath) as! TVCellSlideOutMenu
+        let cell: TVCellSlideOutMenu = tableView.dequeueReusableCellWithIdentifier("celdaOpcionMenu", forIndexPath: indexPath) as! TVCellSlideOutMenu;
         
         cell.opcionMenu = OpcionMenu(texto: opcionesMenuFlotante[indexPath.row], nombreImagen: iconosMenuFlotante[indexPath.row]);
         

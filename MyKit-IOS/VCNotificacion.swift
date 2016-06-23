@@ -11,7 +11,7 @@ import UIKit
 class VCNotificacion:NavigationDrawerViewControllerBase, ControladorAperturaFormularioSegunOpcionMenu
 {
     var identificadoresViewControllers = ["VCNotificacion",
-                                          "TVControllerMedicamento"]
+                                          "TVControllerMedicamento"];
     
     func openMenuOption(option: Int){
         self.cargarViewControllerPorIdentificador(identificadoresViewControllers[option]);

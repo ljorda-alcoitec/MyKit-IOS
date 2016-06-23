@@ -1,0 +1,23 @@
+<xml>
+    <version>1</version>
+    <script>
+        <instruccion>
+            <documentacion>
+                Creamos la tabla versiones
+            </documentacion>
+            <sql>
+                CREATE TABLE IF NOT EXISTS version(
+                    version INT
+                );
+            </sql>
+        </instruccion>
+        <instruccion>
+            <documentacion>
+                Insertamos la version
+            </documentacion>
+            <sql>
+                INSERT INTO version VALUES (1);
+            </sql>
+        </instruccion>
+    </script>
+</xml>

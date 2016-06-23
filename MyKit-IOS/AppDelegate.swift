@@ -36,6 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window!.rootViewController = centerContainer;
         window!.makeKeyAndVisible();
         
+        ControladorVesiones.comprobarVersion();
+        
         return true
     }
     

@@ -7,6 +7,8 @@ target 'MyKit-IOS' do
   
   # Pods for MyKit-IOS
   pod 'DrawerController'
+  pod 'SQLite.swift'
+  pod 'SWXMLHash'
 
   target 'MyKit-IOSTests' do
     inherit! :search_paths

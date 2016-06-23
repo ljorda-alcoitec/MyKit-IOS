@@ -24,20 +24,40 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SQLite.swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SWXMLHash.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>916B710B90D67CEE14C8D258B6D2FB3F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>97095C0044FBE2D044391D8A78F4DAAD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B034DD6A5684895E049FE9713B314545</key>
+		<key>BAD867BAC5EAF2CE87E093318E32EAC1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>D083682CF36071495A66680CF5CE2BA5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1C52294F2A1C40CEE822EB407701763</key>
 		<dict>
 			<key>primary</key>
 			<true/>

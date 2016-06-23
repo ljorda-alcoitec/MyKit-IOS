@@ -10,8 +10,8 @@ import UIKit
 
 class TVCellSlideOutMenu: UITableViewCell {
 
-    @IBOutlet weak var lblOpcionMenu: UILabel!
-    @IBOutlet weak var imgOpcionMenu: UIImageView!
+    @IBOutlet weak var lblOpcionMenu: UILabel!;
+    @IBOutlet weak var imgOpcionMenu: UIImageView!;
     
     var opcionMenu: OpcionMenu?{
         didSet{
