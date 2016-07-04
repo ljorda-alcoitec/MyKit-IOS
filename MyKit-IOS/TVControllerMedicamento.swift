@@ -16,7 +16,7 @@ class TVControllerMedicamento: NavigationDrawerTableViewControllerBase {
     
     override func viewDidLoad() {
         self.listadoMedicamentos = MedicamentoDAO.getMedicamentos();
-        self.tablaMedicamentos.estimatedRowHeight = 90.0;
+        self.tablaMedicamentos.estimatedRowHeight = 95.0;
         self.tablaMedicamentos.rowHeight = UITableViewAutomaticDimension;
     }
     
@@ -33,8 +33,23 @@ class TVControllerMedicamento: NavigationDrawerTableViewControllerBase {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: TVCellMedicamento = tableView.dequeueReusableCellWithIdentifier("celdaMedicamento", forIndexPath: indexPath) as! TVCellMedicamento;
         
-        cell.datosMedicamento = MedicamentoBuilder.crearMedicamento(listadoMedicamentos[indexPath.row].nombre!,
-                                                                    tipo:listadoMedicamentos[indexPath.row].tipo!);
+        cell.datosMedicamento = self.listadoMedicamentos[indexPath.row];
         return cell;
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destino = segue.destinationViewController as! VCDetalleMedicamento;
+        
+        if (segue.identifier == "nuevoMedicamento"){
+            destino.medicamento = Medicamento();
+            return;
+        }
+        
+        if (segue.identifier == "editarMedicamento"){
+            let celda: TVCellMedicamento = self.tableView.cellForRowAtIndexPath(tableView.indexPathForSelectedRow!) as! TVCellMedicamento;
+            destino.medicamento = celda.datosMedicamento;
+        }
+    }
+
  }

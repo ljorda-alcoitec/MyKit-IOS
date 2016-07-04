@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SQLite
 
 class MedicamentoDAO{
     
@@ -22,16 +23,30 @@ class MedicamentoDAO{
         
         let conexion: Conexion = Conexion();
         conexion.abrir();
-        let stmt = conexion.selecccionar(query);
+        let stm = conexion.selecccionar(query);
         
         var medicamentos:[Medicamento] = [];
-        for row in stmt{
+        for row in stm{
             medicamentos.append(MedicamentoBuilder.crearMedicamento(row[0] as! Int64,
                 nombre: row[1] as! String,
                 tipo: row[2] as! Int64));
         }
         
         return medicamentos;
+    }
+    
+    static func getMedicamentoById(id: Int64) -> Medicamento {
+        let query: String = "SELECT nombre, tipo FROM medicamento WHERE id = ?";
+        
+        let conexion:Conexion = Conexion();
+        conexion.abrir();
+        let stm = conexion.selecccionar(query, id);
+        let row = stm.next();
+        if row == nil{
+            return Medicamento();
+        }
+        
+        return MedicamentoBuilder.crearMedicamento(row![0] as! String, tipo: row![1] as! Int64);
     }
 
 }

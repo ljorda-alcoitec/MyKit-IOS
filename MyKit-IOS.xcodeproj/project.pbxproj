@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		15A1C4671879FDE328F578A9 /* Pods_MyKit_IOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9546E3EE926346B2D3790BF7 /* Pods_MyKit_IOSUITests.framework */; };
 		3EA94EDA42A5971F4084F7C7 /* Pods_MyKit_IOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD16085E49341630D5903D75 /* Pods_MyKit_IOSTests.framework */; };
+		850389AF1D2AA6EF00420588 /* CollectionViewControllerCeldaExpandibleBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850389AE1D2AA6EF00420588 /* CollectionViewControllerCeldaExpandibleBase.swift */; };
+		850389B11D2AAD0E00420588 /* CATransitionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850389B01D2AAD0E00420588 /* CATransitionUtils.swift */; };
+		8581956D1D2414030068B728 /* CVControllerMedicamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8581956C1D2414030068B728 /* CVControllerMedicamento.swift */; };
+		8581956F1D2414740068B728 /* CVCellMedicamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8581956E1D2414740068B728 /* CVCellMedicamento.swift */; };
+		858195721D2419700068B728 /* NavigationDrawerCollectionViewControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858195711D2419700068B728 /* NavigationDrawerCollectionViewControllerBase.swift */; };
 		85CE0B4D1D1BF39300E133F7 /* version_1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 85CE0B4C1D1BF39300E133F7 /* version_1.xml */; };
 		85CE0B4F1D1BF49700E133F7 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE0B4E1D1BF49700E133F7 /* StringExtensions.swift */; };
 		85CE0B531D1BF59000E133F7 /* LectorScriptsSqlDeVersionXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE0B521D1BF59000E133F7 /* LectorScriptsSqlDeVersionXML.swift */; };
@@ -17,7 +22,6 @@
 		85CE0B5B1D1BF6B300E133F7 /* Conexion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE0B5A1D1BF6B300E133F7 /* Conexion.swift */; };
 		85CE0B5F1D1C228B00E133F7 /* Medicamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE0B5E1D1C228B00E133F7 /* Medicamento.swift */; };
 		85CE0B621D1C25F300E133F7 /* MedicamentoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE0B611D1C25F300E133F7 /* MedicamentoBuilder.swift */; };
-		85CE0B651D1C279400E133F7 /* TVCellMedicamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE0B641D1C279400E133F7 /* TVCellMedicamento.swift */; };
 		85CE0B671D1C295E00E133F7 /* TipoMedicamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE0B661D1C295E00E133F7 /* TipoMedicamento.swift */; };
 		85CE0B6C1D1C307A00E133F7 /* version_2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 85CE0B6B1D1C307A00E133F7 /* version_2.xml */; };
 		85CE0B6E1D1C332500E133F7 /* MedicamentoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE0B6D1D1C332500E133F7 /* MedicamentoDAO.swift */; };
@@ -34,7 +38,6 @@
 		85D9782B1D1AD8F700B3C5EA /* VCNotificacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9782A1D1AD8F700B3C5EA /* VCNotificacion.swift */; };
 		85D978301D1AD9F000B3C5EA /* NavigationDrawerTableViewControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9782F1D1AD9F000B3C5EA /* NavigationDrawerTableViewControllerBase.swift */; };
 		85D978341D1ADA3400B3C5EA /* NavigationDrawerViewControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D978331D1ADA3400B3C5EA /* NavigationDrawerViewControllerBase.swift */; };
-		85D978371D1ADB9100B3C5EA /* TVControllerMedicamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D978361D1ADB9100B3C5EA /* TVControllerMedicamento.swift */; };
 		C1FDCA797A267136B6D68209 /* Pods_MyKit_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15142981B8E6EC78E22B4DA7 /* Pods_MyKit_IOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +64,11 @@
 		435AA8404C0550FA949AF897 /* Pods-MyKit-IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyKit-IOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyKit-IOS/Pods-MyKit-IOS.release.xcconfig"; sourceTree = "<group>"; };
 		71B517F87E482041DBE5CC56 /* Pods-MyKit-IOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyKit-IOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyKit-IOSTests/Pods-MyKit-IOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7BB184DCD54B9BAB2488A704 /* Pods-MyKit-IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyKit-IOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyKit-IOS/Pods-MyKit-IOS.debug.xcconfig"; sourceTree = "<group>"; };
+		850389AE1D2AA6EF00420588 /* CollectionViewControllerCeldaExpandibleBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewControllerCeldaExpandibleBase.swift; sourceTree = "<group>"; };
+		850389B01D2AAD0E00420588 /* CATransitionUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CATransitionUtils.swift; sourceTree = "<group>"; };
+		8581956C1D2414030068B728 /* CVControllerMedicamento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVControllerMedicamento.swift; sourceTree = "<group>"; };
+		8581956E1D2414740068B728 /* CVCellMedicamento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCellMedicamento.swift; sourceTree = "<group>"; };
+		858195711D2419700068B728 /* NavigationDrawerCollectionViewControllerBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationDrawerCollectionViewControllerBase.swift; sourceTree = "<group>"; };
 		85CE0B4C1D1BF39300E133F7 /* version_1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = version_1.xml; sourceTree = "<group>"; };
 		85CE0B4E1D1BF49700E133F7 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		85CE0B521D1BF59000E133F7 /* LectorScriptsSqlDeVersionXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectorScriptsSqlDeVersionXML.swift; sourceTree = "<group>"; };
@@ -69,7 +77,6 @@
 		85CE0B5A1D1BF6B300E133F7 /* Conexion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conexion.swift; sourceTree = "<group>"; };
 		85CE0B5E1D1C228B00E133F7 /* Medicamento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medicamento.swift; sourceTree = "<group>"; };
 		85CE0B611D1C25F300E133F7 /* MedicamentoBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicamentoBuilder.swift; sourceTree = "<group>"; };
-		85CE0B641D1C279400E133F7 /* TVCellMedicamento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVCellMedicamento.swift; sourceTree = "<group>"; };
 		85CE0B661D1C295E00E133F7 /* TipoMedicamento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoMedicamento.swift; sourceTree = "<group>"; };
 		85CE0B6B1D1C307A00E133F7 /* version_2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = version_2.xml; sourceTree = "<group>"; };
 		85CE0B6D1D1C332500E133F7 /* MedicamentoDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicamentoDAO.swift; sourceTree = "<group>"; };
@@ -92,7 +99,6 @@
 		85D9782A1D1AD8F700B3C5EA /* VCNotificacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCNotificacion.swift; sourceTree = "<group>"; };
 		85D9782F1D1AD9F000B3C5EA /* NavigationDrawerTableViewControllerBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationDrawerTableViewControllerBase.swift; sourceTree = "<group>"; };
 		85D978331D1ADA3400B3C5EA /* NavigationDrawerViewControllerBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationDrawerViewControllerBase.swift; sourceTree = "<group>"; };
-		85D978361D1ADB9100B3C5EA /* TVControllerMedicamento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVControllerMedicamento.swift; sourceTree = "<group>"; };
 		8E756003D2165F97C5655D52 /* Pods-MyKit-IOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyKit-IOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyKit-IOSUITests/Pods-MyKit-IOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8EC42234721BA4C169EB1408 /* Pods-MyKit-IOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyKit-IOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyKit-IOSUITests/Pods-MyKit-IOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9546E3EE926346B2D3790BF7 /* Pods_MyKit_IOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyKit_IOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				85CE0B4E1D1BF49700E133F7 /* StringExtensions.swift */,
+				850389B01D2AAD0E00420588 /* CATransitionUtils.swift */,
 				85CE0B511D1BF4F500E133F7 /* versiones */,
 			);
 			name = utils;
@@ -292,6 +299,8 @@
 			children = (
 				85D9782F1D1AD9F000B3C5EA /* NavigationDrawerTableViewControllerBase.swift */,
 				85D978331D1ADA3400B3C5EA /* NavigationDrawerViewControllerBase.swift */,
+				858195711D2419700068B728 /* NavigationDrawerCollectionViewControllerBase.swift */,
+				850389AE1D2AA6EF00420588 /* CollectionViewControllerCeldaExpandibleBase.swift */,
 			);
 			name = base;
 			sourceTree = "<group>";
@@ -299,8 +308,8 @@
 		85D978351D1ADB6200B3C5EA /* medicamento */ = {
 			isa = PBXGroup;
 			children = (
-				85D978361D1ADB9100B3C5EA /* TVControllerMedicamento.swift */,
-				85CE0B641D1C279400E133F7 /* TVCellMedicamento.swift */,
+				8581956C1D2414030068B728 /* CVControllerMedicamento.swift */,
+				8581956E1D2414740068B728 /* CVCellMedicamento.swift */,
 			);
 			name = medicamento;
 			sourceTree = "<group>";
@@ -585,6 +594,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				858195721D2419700068B728 /* NavigationDrawerCollectionViewControllerBase.swift in Sources */,
 				85CE0B621D1C25F300E133F7 /* MedicamentoBuilder.swift in Sources */,
 				85CE0B591D1BF66E00E133F7 /* VersionDAO.swift in Sources */,
 				85D978261D1AD83C00B3C5EA /* OpcionMenu.swift in Sources */,
@@ -595,12 +605,14 @@
 				85D978341D1ADA3400B3C5EA /* NavigationDrawerViewControllerBase.swift in Sources */,
 				85CE0B5F1D1C228B00E133F7 /* Medicamento.swift in Sources */,
 				85D978221D1AD7A200B3C5EA /* VCSlideOutMenu.swift in Sources */,
+				850389AF1D2AA6EF00420588 /* CollectionViewControllerCeldaExpandibleBase.swift in Sources */,
 				85D978241D1AD81600B3C5EA /* ControladorAperturaFormularioSegunOpcionMenu.swift in Sources */,
-				85D978371D1ADB9100B3C5EA /* TVControllerMedicamento.swift in Sources */,
+				8581956D1D2414030068B728 /* CVControllerMedicamento.swift in Sources */,
 				85CE0B6E1D1C332500E133F7 /* MedicamentoDAO.swift in Sources */,
 				85D978281D1AD87000B3C5EA /* TVCellSlideOutMenu.swift in Sources */,
+				8581956F1D2414740068B728 /* CVCellMedicamento.swift in Sources */,
 				85D9782B1D1AD8F700B3C5EA /* VCNotificacion.swift in Sources */,
-				85CE0B651D1C279400E133F7 /* TVCellMedicamento.swift in Sources */,
+				850389B11D2AAD0E00420588 /* CATransitionUtils.swift in Sources */,
 				85CE0B5B1D1BF6B300E133F7 /* Conexion.swift in Sources */,
 				85CE0B671D1C295E00E133F7 /* TipoMedicamento.swift in Sources */,
 				85D977F31D1AA7D500B3C5EA /* AppDelegate.swift in Sources */,
