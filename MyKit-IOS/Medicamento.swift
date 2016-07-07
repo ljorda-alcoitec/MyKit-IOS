@@ -11,6 +11,7 @@ import Foundation
 class Medicamento{
     var id:Int64!;
     var nombre:String!;
+    var composicion:String!;
     var tipo:Int64!;
 
 }

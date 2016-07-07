@@ -9,17 +9,19 @@
 import Foundation
 class MedicamentoBuilder{
     
-    static func crearMedicamento(id:Int64, nombre:String, tipo:Int64) -> Medicamento{
+    static func crearMedicamento(id:Int64, nombre:String, composicion: String, tipo:Int64) -> Medicamento{
         let medicamento:Medicamento = MedicamentoBuilder.crearMedicamento(nombre,
+                                                                          composicion: composicion,
                                                                           tipo: tipo);
         medicamento.id = id;
         return medicamento;
         
     }
     
-    static func crearMedicamento(nombre:String, tipo:Int64) -> Medicamento{
+    static func crearMedicamento(nombre:String, composicion:String, tipo:Int64) -> Medicamento{
         let medicamento:Medicamento = Medicamento();
         medicamento.nombre = nombre;
+        medicamento.composicion = composicion;
         medicamento.tipo = tipo;
         return medicamento;
     }

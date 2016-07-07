@@ -19,7 +19,7 @@ class MedicamentoDAO{
     }
     
     static func getMedicamentos() -> Array<Medicamento>{
-        let query: String = "SELECT id, nombre, tipo FROM medicamento";
+        let query: String = "SELECT id, nombre, composicion, tipo FROM medicamento";
         
         let conexion: Conexion = Conexion();
         conexion.abrir();
@@ -29,14 +29,15 @@ class MedicamentoDAO{
         for row in stm{
             medicamentos.append(MedicamentoBuilder.crearMedicamento(row[0] as! Int64,
                 nombre: row[1] as! String,
-                tipo: row[2] as! Int64));
+                composicion: row[2] as! String,
+                tipo: row[3] as! Int64));
         }
         
         return medicamentos;
     }
     
     static func getMedicamentoById(id: Int64) -> Medicamento {
-        let query: String = "SELECT nombre, tipo FROM medicamento WHERE id = ?";
+        let query: String = "SELECT nombre, composicion, tipo FROM medicamento WHERE id = ?";
         
         let conexion:Conexion = Conexion();
         conexion.abrir();
@@ -46,7 +47,9 @@ class MedicamentoDAO{
             return Medicamento();
         }
         
-        return MedicamentoBuilder.crearMedicamento(row![0] as! String, tipo: row![1] as! Int64);
+        return MedicamentoBuilder.crearMedicamento(row![0] as! String,
+                                                   composicion: row![1] as! String,
+                                                   tipo: row![2] as! Int64);
     }
 
 }

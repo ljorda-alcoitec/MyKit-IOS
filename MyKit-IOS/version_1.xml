@@ -27,9 +27,25 @@
                 CREATE TABLE IF NOT EXISTS medicamento(
                 id  INTEGER PRIMARY KEY AUTOINCREMENT,
                 nombre TEXT,
+                composicion TEXT,
                 tipo INT
                 );
             </sql>
         </instruccion>
+        <instruccion>
+            <documentacion>
+               Insertamos medicamentos
+            </documentacion>
+            <sql>
+                INSERT INTO medicamento (nombre, composicion, tipo)
+                VALUES
+                    ("Paracetamol", "paracetamol de 500 gramos con un poco de azucar de 699 aracetamol de 500 gramos con un poco de azucar de 699 aracetamol de 500 gramos con un poco de azucar de 699 aracetamol de 500 gramos con un poco de azucar de 699 aracetamol de 500 gramos con un poco de azucar de 699 aracetamol de 500 gramos con un poco de azucar de 699 aracetamol de 500 gramos con un poco de azucar de 699 aracetamol de 500 gramos con un poco de azucar de 699 aracetamol de 500 gramos con un poco de azucar de 699 ", 1),
+                    ("Ibuprofeno", "ibuprofeno", 2),
+                    ("Zyrtec", "dlaajaalahfljkhflajhncldj lakjdshlajhdf aljkdhlajdf" , 3),
+                    ("Omeoprazol", "fjfi jfjdjj kdjfjfkdjf", 4),
+                    ("Enantyum", "dadkdñf",2);
+            </sql>
+        </instruccion>
+
     </script>
 </xml>

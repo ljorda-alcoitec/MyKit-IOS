@@ -41,13 +41,19 @@ class CVControllerMedicamento: CollectionViewControllerCeldaExpandibleBase {
         return cell
     }
     
-    override func getSizeCeldaContraida(indexPath: NSIndexPath) -> CGSize{
-        return CGSizeMake(333.0, 110.0);
+    override func getSizeCeldaContraida(indexPath: NSIndexPath) -> CGSize {
+   
+       let altoLabel = UILabel.getAltoUILabelPorSimulacion(self.collectionView!.frame.width - 40,fuente: UIFont.systemFontOfSize(17.0), texto: self.listadoMedicamentos[indexPath.row].composicion);
+        //self.listadoMedicamentos[indexPath.row].composicion;
+        return CGSizeMake(self.getAncho(), altoLabel + 140);
     }
+   /*override func getSizeCeldaContraida(indexPath: NSIndexPath) -> CGSize{
+         var cell = collectionView!.dequeueReusableCellWithReuseIdentifier("celdaDumy", forIndexPath: indexPath) as! CVCellMedicamento;
+    
+        return CGSizeMake(self.getAncho(), 400.0);
+    }*/
     
     override func getSizeCeldaExpandida(indexPath: NSIndexPath) -> CGSize{
-        return CGSizeMake(333.0, 357.0);
+        return CGSizeMake(self.getAncho(), 357.0);
     }
-
-  
 }

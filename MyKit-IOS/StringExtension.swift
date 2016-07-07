@@ -1,5 +1,5 @@
 //
-//  StringExtensions.swift
+//  StringExtension.swift
 //  MyKit-IOS
 //
 //  Created by Lucía Jordá Hernández on 23/6/16.

@@ -12,11 +12,11 @@ import SQLite;
 class VersionDAO{
     
     static func getVersion(conexion: Conexion)-> Int64{
-        if !conexion.existTable("vesion"){
+        if !conexion.existTable("version"){
             return 0;
         }
         
-        return conexion.leeEntero("SELECT version FROM version");
+        return conexion.leeEntero("SELECT MAX(version) FROM version");
     }
     
 }

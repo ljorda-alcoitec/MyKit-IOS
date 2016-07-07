@@ -19,7 +19,7 @@ class CollectionViewControllerCeldaExpandibleBase: NavigationDrawerCollectionVie
         return self.indexPathExpandido == indexPath;
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
         if self.esCeldaExpandida(indexPath) {
             return self.getSizeCeldaExpandida(indexPath);
@@ -28,13 +28,17 @@ class CollectionViewControllerCeldaExpandibleBase: NavigationDrawerCollectionVie
     }
     
     func getSizeCeldaContraida(indexPath: NSIndexPath) -> CGSize{
-        return CGSizeMake(333.0, 110.0);
+        return CGSizeMake(self.getAncho(), 110.0);
     }
     
     func getSizeCeldaExpandida(indexPath: NSIndexPath) -> CGSize{
-        return CGSizeMake(333.0, 357.0);
+        return CGSizeMake(self.getAncho(), 357.0);
     }
     
+    func getAncho() -> CGFloat{
+        return (self.parentViewController?.view.frame.width)! - 10;
+    }
+ 
     
     @IBAction func eventExpandirCelda(sender: AnyObject) {
         let position: CGPoint = sender.convertPoint(CGPointZero, toView: self.collectionView);
