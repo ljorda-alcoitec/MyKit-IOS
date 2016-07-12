@@ -9,16 +9,12 @@
 import UIKit
 
 extension UILabel{
-    func ajustarTexto(){
+   func ajustarTexto(){
         self.numberOfLines = 0;
         self.minimumScaleFactor = 0.5;
         self.adjustsFontSizeToFitWidth = true;
     }
     
-    func ajustarLabel(){
-        self.numberOfLines = 0;
-        //self.sizeToFit();
-    }
     
     static func getAltoUILabelPorSimulacion(anchoLabel: CGFloat, fuente:UIFont, texto: String) -> CGFloat{
         let labelSimulacion:UILabel = UILabel(frame: CGRectMake(0, 0, anchoLabel, CGFloat.max));

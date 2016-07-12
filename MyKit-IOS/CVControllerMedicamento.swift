@@ -15,7 +15,7 @@ class CVControllerMedicamento: CollectionViewControllerCeldaExpandibleBase {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         self.listadoMedicamentos = MedicamentoDAO.getMedicamentos();
+        self.listadoMedicamentos = MedicamentoDAO.getMedicamentos();
     }
 
     // MARK: UICollectionViewDataSource
@@ -30,15 +30,16 @@ class CVControllerMedicamento: CollectionViewControllerCeldaExpandibleBase {
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell: CVCellMedicamento;
         if self.esCeldaExpandida(indexPath){
-            cell = collectionView.dequeueReusableCellWithReuseIdentifier("celdaExpandida", forIndexPath: indexPath) as! CVCellMedicamento;
+            let celda = collectionView.dequeueReusableCellWithReuseIdentifier("celdaExpandida", forIndexPath: indexPath) as! CVCellExpandidaMedicamento;
+            celda.datosMedicamento = self.listadoMedicamentos[indexPath.row];
+            return celda;
+            
         }else{
-            cell = collectionView.dequeueReusableCellWithReuseIdentifier("celdaBasica", forIndexPath: indexPath) as! CVCellMedicamento;
+            let celda = collectionView.dequeueReusableCellWithReuseIdentifier("celdaBasica", forIndexPath: indexPath) as! CVCellMedicamento;
+            celda.datosMedicamento = self.listadoMedicamentos[indexPath.row];
+            return celda;
         }
-    
-        cell.datosMedicamento = self.listadoMedicamentos[indexPath.row];
-        return cell
     }
     
     override func getSizeCeldaContraida(indexPath: NSIndexPath) -> CGSize {
@@ -47,11 +48,6 @@ class CVControllerMedicamento: CollectionViewControllerCeldaExpandibleBase {
         //self.listadoMedicamentos[indexPath.row].composicion;
         return CGSizeMake(self.getAncho(), altoLabel + 140);
     }
-   /*override func getSizeCeldaContraida(indexPath: NSIndexPath) -> CGSize{
-         var cell = collectionView!.dequeueReusableCellWithReuseIdentifier("celdaDumy", forIndexPath: indexPath) as! CVCellMedicamento;
-    
-        return CGSizeMake(self.getAncho(), 400.0);
-    }*/
     
     override func getSizeCeldaExpandida(indexPath: NSIndexPath) -> CGSize{
         return CGSizeMake(self.getAncho(), 357.0);
